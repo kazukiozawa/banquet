@@ -1,0 +1,21 @@
+@use "../globals" as *;
+
+.btn {
+  width: fit-content;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-right: 14px;
+  padding-left: 14px;
+  border-radius: 38%;
+  border-radius: 18px 18px;
+  background-color: $cWhite;
+  border: 2px solid $cMain;
+  cursor: pointer;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}

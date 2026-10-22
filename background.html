@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Me - Ozawa Kazuki Portfolio</title>
+    <script src="scripts/vendors/pace.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- <script src="scripts/vendors/gsap.min.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+    <script src="scripts/vendors/scroll-polyfill.js" defer></script>
+    <script src="scripts/libs/scroll.js" defer></script>
+
+    <script src="scripts/libs/mobile-menu.js" defer></script>
+    <!-- <script src="scripts/libs/gsap-test.js" defer></script> -->
+
+    <script src="scripts/libs/text-animation.js" defer></script>
+    <script src="scripts/libs/vision-space.js" defer></script>
+    <script src="scripts/libs/vision-animation.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <header class="header">
+          <div class="header__inner">
+            <h1 class="header__logo">
+              <a href="index.html" class="header__link">
+                <img class="header__img" src="images/kazLogo.svg" />
+              </a>
+            </h1>
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li">
+                  <a href="index.html" class="header__link">ABOUT</a>
+                </li>
+                <li class="header__li">
+                  <a href="#work" class="header__link header__link-work">WORKS</a>
+                </li>
+                <li class="header__li">
+                  <a href="index.html" class="header__link">CONTACT</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="mobile-menu__btn" id="menu-btn">
+              <p class="mobile-menu__btn-str">MENU</p>
+              <div class="borders-wrap">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <section class="bg">
+            <div class="bg__inner">
+
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <div class="footer__inner">
+            <a href="#top" class="footer__topbtn">
+              <span class="footer__topbtn-arrow bent-arrow"></span>
+              <span class="footer__topbtn-str">TOP</span>
+            </a>
+            <div class="copyright__wrap">
+              <small
+                ><p class="copyright">
+                  &copy;2025 ozawa kazuki. All Rights Reserved.
+                </p></small
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div id="mobile-menu__container">
+        <nav class="mobile-menu">
+          <h2 class="top-title">
+            <p class="top-title__first">Web Design</p>
+            <p class="top-title__second">PORTFOLIO</p>
+            <p class="top-title__third">
+              <span class="top-title__third-height">by Ozawa Kazuki</span>
+              <span class="top-title__third-behind">by Ozawa Kazuki</span>
+              <span class="top-title__third-front">by Ozawa Kazuki</span>
+            </p>
+          </h2>
+          <ul class="mobile-menu__main">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="index.html">
+                <span class="mobile-menu__main-title">HOME</span>
+                <span class="mobile-menu__sub-title">ホーム</span>
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="about.html">
+                <span class="mobile-menu__main-title">ABOUT</span>
+                <span class="mobile-menu__sub-title">わたしについて</span>
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                <span class="mobile-menu__main-title">WORKS </span>
+                <span class="mobile-menu__sub-title">制作物</span>
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                <span class="mobile-menu__main-title">CONTACT</span>
+                <span class="mobile-menu__sub-title">お問合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
