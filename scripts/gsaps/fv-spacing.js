@@ -41,7 +41,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   lenis.on("scroll", ScrollTrigger.update);
 
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
+  const lenisRaf = (time) => {
+    lenis.raf(time * 1000);
+  };
+
+  gsap.ticker.add(lenisRaf);
+
+  let lastTickerTime = null;
+
+  gsap.ticker.add((time) => {
+    if (lastTickerTime !== null) {
+      const delta = (time - lastTickerTime) * 1000;
+
+      if (delta > 100) {
+        console.log("[ticker gap]", {
+          deltaMs: delta.toFixed(1),
+          scrollY: window.scrollY,
+          lenisScroll: lenis.scroll,
+        });
+      }
+    }
+
+    lastTickerTime = time;
+  });
 
   gsap.ticker.lagSmoothing(0);
 
