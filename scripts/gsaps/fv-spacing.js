@@ -23,13 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
 console.log('thisIsTest');
 
 window.addEventListener("pageshow", (event) => {
-  console.log("pageshow:", {
-    restoredFromCache: event.persisted,
-    scrollY: window.scrollY,
-    scrollHeight: document.documentElement.scrollHeight,
+  if (event.persisted) {
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh(true);
+    });
+  }
   });
-
-  requestAnimationFrame(() => {
-    ScrollTrigger.refresh();
-  });
-});
