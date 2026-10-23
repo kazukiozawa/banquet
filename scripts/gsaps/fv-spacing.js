@@ -37,6 +37,7 @@ let lenis;
 
 document.addEventListener("DOMContentLoaded", () => {
   lenis = new Lenis();
+  console.count("[Lenis initialized]");
 
   lenis.on("scroll", ScrollTrigger.update);
 
