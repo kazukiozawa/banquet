@@ -81,15 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("pageshow", (event) => {
-  console.log("[pageshow]", {
-    persisted: event.persisted,
-    scrollY: window.scrollY,
-    scrollHeight: document.documentElement.scrollHeight,
-    lenisScroll: lenis?.scroll,
-    animatedScroll: lenis?.animatedScroll,
-    targetScroll: lenis?.targetScroll,
-    isScrolling: lenis?.isScrolling,
-  });
+  
 
   requestAnimationFrame(() => {
     console.log("[pageshow + 1 frame]", {
@@ -102,15 +94,7 @@ window.addEventListener("pageshow", (event) => {
   });
 });
 
-window.addEventListener("wheel", () => {
-  console.log("[wheel]", {
-    scrollY: window.scrollY,
-    lenisScroll: lenis?.scroll,
-    animatedScroll: lenis?.animatedScroll,
-    targetScroll: lenis?.targetScroll,
-    isScrolling: lenis?.isScrolling,
-    velocity: lenis?.velocity,
-  });
-}, { passive: true });
+console.log("GSAP:", gsap.version);
+console.log("ScrollTrigger:", ScrollTrigger.version);
 
 console.log('New');
