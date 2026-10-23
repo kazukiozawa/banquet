@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.ticker.add((time) => lenis.raf(time * 1000));
 
-  gsap.ticker.lagSmoothing(0);
+  // gsap.ticker.lagSmoothing(0);
 
   gsap.to(".fv__container", {
     marginLeft: 0,
