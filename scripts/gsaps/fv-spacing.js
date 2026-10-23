@@ -94,7 +94,5 @@ window.addEventListener("pageshow", (event) => {
   });
 });
 
-console.log("GSAP:", gsap.version);
-console.log("ScrollTrigger:", ScrollTrigger.version);
+console.log("Lenis:", Lenis.version);
 
-console.log('New');
