@@ -58,14 +58,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("pageshow", (event) => {
-  if (event.persisted && lenis) {
-    requestAnimationFrame(() => {
-      lenis.stop();
-      lenis.resize();
-      lenis.start();
-      ScrollTrigger.refresh();
+  console.log("[pageshow]", {
+    persisted: event.persisted,
+    scrollY: window.scrollY,
+    scrollHeight: document.documentElement.scrollHeight,
+    lenisScroll: lenis?.scroll,
+    animatedScroll: lenis?.animatedScroll,
+    targetScroll: lenis?.targetScroll,
+    isScrolling: lenis?.isScrolling,
+  });
+
+  requestAnimationFrame(() => {
+    console.log("[pageshow + 1 frame]", {
+      scrollY: window.scrollY,
+      lenisScroll: lenis?.scroll,
+      animatedScroll: lenis?.animatedScroll,
+      targetScroll: lenis?.targetScroll,
+      isScrolling: lenis?.isScrolling,
     });
-  }
+  });
 });
 
-console.log('window.addEventListener("pageshow"');
+console.log('New');
