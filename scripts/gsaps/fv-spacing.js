@@ -38,9 +38,9 @@ let lenis;
 document.addEventListener("DOMContentLoaded", () => {
   lenis = new Lenis();
 
-  // lenis.on("scroll", ScrollTrigger.update);
+  lenis.on("scroll", ScrollTrigger.update);
 
-  // gsap.ticker.add((time) => lenis.raf(time * 1000));
+  gsap.ticker.add((time) => lenis.raf(time * 1000));
 
   gsap.ticker.lagSmoothing(0);
 
@@ -60,10 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("pageshow", (event) => {
   if (event.persisted && lenis) {
     requestAnimationFrame(() => {
+      lenis.stop();
       lenis.resize();
+      lenis.start();
       ScrollTrigger.refresh();
     });
   }
 });
 
-console.log('// gsap.ticker.add((time) => lenis.raf(time * 1000));');
+console.log('window.addEventListener("pageshow"');
