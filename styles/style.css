@@ -1099,12 +1099,25 @@ h5 {
     margin-bottom: 24px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .chef__img-wrap {
+    max-width: 322px;
+  }
+}
 .chef__content {
   max-width: 588px;
   margin: 0 auto;
 }
 .chef__btn {
   margin: 0 auto;
+}
+@media screen and (min-width: 960px) {
+  .chef__btn {
+    width: 248px;
+    height: 48px;
+    border-radius: 24px 24px;
+    margin: 0;
+  }
 }
 .chef__name {
   margin-bottom: 44px;

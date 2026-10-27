@@ -759,6 +759,9 @@
     @include mq(sm){
       margin-bottom: 24px;
     }
+    @include mq(xl){
+      max-width: 322px;
+    }
     
   }
 
@@ -769,6 +772,13 @@
 
   &__btn {
     margin: 0 auto;
+
+    @include mq(lg){
+      width: 248px;
+      height: 48px;
+      border-radius: 24px 24px;
+      margin: 0;
+    }
   }
 
   &__name {
