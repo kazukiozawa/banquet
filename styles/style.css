@@ -155,7 +155,7 @@ h5 {
   padding-bottom: 16px !important;
 }
 
-.pb-lg, .menu__course, .chef {
+.pb-lg, .menu__course, .chef, .acc {
   padding-bottom: 172px !important;
 }
 
@@ -206,8 +206,9 @@ h5 {
   font-weight: 400;
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
-  line-height: 0.7;
+  line-height: 1;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 960px) {
   .main-title {
@@ -1104,6 +1105,14 @@ h5 {
     max-width: 322px;
   }
 }
+.chef__name-wrap {
+  text-align: center;
+}
+@media screen and (min-width: 960px) {
+  .chef__name-wrap {
+    text-align: left;
+  }
+}
 .chef__content {
   max-width: 588px;
   margin: 0 auto;
@@ -1124,6 +1133,19 @@ h5 {
 }
 .chef__description {
   margin-bottom: 44px;
+}
+
+.acc {
+  background-color: #FBF7F0;
+  position: relative;
+  z-index: 10;
+  padding-top: 132px;
+  padding-inline: 20px;
+}
+.acc__title-wrap {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 72px;
 }
 
 .footer {

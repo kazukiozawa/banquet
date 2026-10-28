@@ -765,6 +765,14 @@
     
   }
 
+  &__name-wrap {
+    text-align: center;
+
+    @include mq(lg){
+      text-align: left;
+    }
+  }
+
   &__content {
     max-width: 588px;
     margin: 0 auto;
@@ -791,6 +799,26 @@
 
 
 }
+
+.acc {
+  @extend .pb-lg;
+  background-color: #FBF7F0;
+  position: relative;
+  z-index: 10;
+  padding-top: 132px;
+  padding-inline: 20px;
+
+  &__title-wrap {
+    
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 72px;
+
+  }
+
+}
+
+
 
 .footer {
   height: 200px;
