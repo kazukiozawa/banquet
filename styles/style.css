@@ -104,13 +104,13 @@ a {
   color: #0c0700;
 }
 
-p {
+p, .acc__info {
   font-size: 15px;
   line-height: 1.7;
   letter-spacing: 0.05em;
 }
 @media screen and (min-width: 960px) {
-  p {
+  p, .acc__info {
     font-size: 17px;
     line-height: 34px;
   }
@@ -1107,6 +1107,7 @@ h5 {
 }
 .chef__name-wrap {
   text-align: center;
+  padding-top: 8px;
 }
 @media screen and (min-width: 960px) {
   .chef__name-wrap {
@@ -1139,13 +1140,42 @@ h5 {
   background-color: #FBF7F0;
   position: relative;
   z-index: 10;
-  padding-top: 132px;
-  padding-inline: 20px;
+}
+@media screen and (min-width: 960px) {
+  .acc {
+    padding-top: 132px;
+  }
 }
 .acc__title-wrap {
   margin: 0 auto;
   text-align: center;
   padding-bottom: 72px;
+}
+.acc .map-embed {
+  height: 420px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+.acc__info {
+  max-width: 840px;
+  margin: 0 auto;
+}
+.acc__info-wrap {
+  padding-inline: 20px;
+}
+.acc__info-item {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 960px) {
+  .acc__info-item {
+    display: flex;
+  }
+}
+.acc__info-title {
+  width: 116px;
+}
+.acc__info-data {
+  margin-left: 10px;
 }
 
 .footer {

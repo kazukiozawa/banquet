@@ -624,7 +624,7 @@
     // margin-bottom: 
     @extend .pb-lg;
 
-    @include mq(xl){
+    @include mq(xl) {
       width: 1270px;
       margin: 0 auto;
     }
@@ -665,7 +665,7 @@
       right: -20px;
       width: 196px;
 
-      @include mq(lg){
+      @include mq(lg) {
         width: 296px;
       }
     }
@@ -724,7 +724,7 @@
 
 .chef {
   background-color: #FBF7F0;
-  
+
   position: relative;
   z-index: 10;
   padding-top: 132px;
@@ -735,40 +735,44 @@
     // display: inline-block;
     margin: 0 auto;
     text-align: center;
+
     padding-bottom: 72px;
     // & .main-title{
-  
+
     // }
 
   }
 
   &__inner {
     margin: 0 auto;
-    @include mq(lg){
+
+    @include mq(lg) {
       display: flex;
       gap: 108px;
       max-width: 840px;
     }
   }
 
-  &__img-wrap{
+  &__img-wrap {
     margin-bottom: 8px;
     max-width: 232px;
     margin: 0 auto;
 
-    @include mq(sm){
+    @include mq(sm) {
       margin-bottom: 24px;
     }
-    @include mq(xl){
+
+    @include mq(xl) {
       max-width: 322px;
     }
-    
+
   }
 
   &__name-wrap {
     text-align: center;
+    padding-top: 8px;
 
-    @include mq(lg){
+    @include mq(lg) {
       text-align: left;
     }
   }
@@ -781,7 +785,7 @@
   &__btn {
     margin: 0 auto;
 
-    @include mq(lg){
+    @include mq(lg) {
       width: 248px;
       height: 48px;
       border-radius: 24px 24px;
@@ -792,6 +796,7 @@
   &__name {
     margin-bottom: 44px;
   }
+
   &__description {
     margin-bottom: 44px;
   }
@@ -805,14 +810,52 @@
   background-color: #FBF7F0;
   position: relative;
   z-index: 10;
-  padding-top: 132px;
-  padding-inline: 20px;
+
+  @include mq(lg) {
+    padding-top: 132px;
+
+  }
 
   &__title-wrap {
-    
+
     margin: 0 auto;
     text-align: center;
     padding-bottom: 72px;
+
+  }
+
+  & .map-embed {
+    height: 420px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  &__info {
+    max-width: 840px;
+    margin: 0 auto;
+    
+    @extend p;
+    
+    &-wrap {
+      padding-inline: 20px;
+      
+    }
+
+    &-item {
+      margin-bottom: 16px;
+
+      @include mq(lg){
+        display: flex;
+      }
+
+    }
+    &-title {
+      width: 116px;
+    }
+
+    &-data {
+      margin-left: 10px;
+    }
 
   }
 
