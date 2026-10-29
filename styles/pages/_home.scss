@@ -737,9 +737,6 @@
     text-align: center;
 
     padding-bottom: 72px;
-    // & .main-title{
-
-    // }
 
   }
 
@@ -791,6 +788,12 @@
       border-radius: 24px 24px;
       margin: 0;
     }
+  }
+
+  &__position {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
   }
 
   &__name {
@@ -855,12 +858,46 @@
 
     &-data {
       margin-left: 10px;
+
+      @include mq(lg){
+        margin-left: 0;
+      }
     }
 
   }
 
 }
 
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FBF7F0;
+  position: relative;
+  z-index: 10;
+
+  
+
+  &__track {
+    display: flex;
+    width: max-content;
+  }
+
+  &__group {
+    display: flex;
+    flex-shrink: 0;
+    gap: 20px;
+    padding-right: 20px;
+
+    img {
+      display: block;
+      width: 300px;
+      height: 200px;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+  }
+}
 
 
 .footer {

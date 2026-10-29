@@ -1129,6 +1129,11 @@ h5 {
     margin: 0;
   }
 }
+.chef__position {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
 .chef__name {
   margin-bottom: 44px;
 }
@@ -1176,6 +1181,38 @@ h5 {
 }
 .acc__info-data {
   margin-left: 10px;
+}
+@media screen and (min-width: 960px) {
+  .acc__info-data {
+    margin-left: 0;
+  }
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FBF7F0;
+  position: relative;
+  z-index: 10;
+}
+.marquee__track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+}
+.marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 20px;
+  padding-right: 20px;
+}
+.marquee__group img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {
