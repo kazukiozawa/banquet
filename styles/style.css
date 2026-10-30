@@ -1132,10 +1132,23 @@ h5 {
 .chef__position {
   font-size: 14px;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
+}
+@media screen and (min-width: 960px) {
+  .chef__position {
+    font-weight: 500;
+  }
 }
 .chef__name {
+  font-size: 18px;
   margin-bottom: 44px;
+  font-weight: 500;
+}
+@media screen and (min-width: 960px) {
+  .chef__name {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
 .chef__description {
   margin-bottom: 44px;

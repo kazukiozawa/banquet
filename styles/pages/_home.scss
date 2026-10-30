@@ -793,11 +793,23 @@
   &__position {
     font-size: 14px;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 400;
+    
+    @include mq(lg){
+      font-weight: 500;
+
+    }
   }
 
   &__name {
+    font-size: 18px;
     margin-bottom: 44px;
+    font-weight: 500;
+    
+    @include mq(lg){
+      font-size: 24px;
+      font-weight: 700;
+    }
   }
 
   &__description {
