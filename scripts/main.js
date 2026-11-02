@@ -6,17 +6,21 @@ class Main {
         this.header = document.querySelector('.header');
         this.sides = document.querySelectorAll('.side');
         this.fv = document.querySelector('.fv');
-        // this.#init();
+        this.#init();
+        this.marquee = new Marquee();
+
+        // this.#initMarquee();
         this.#scrollInit();
     }
 
     #init() {
-        new MobileMenu;
-        Pace.on('done', this.#scrollInit.bind(this));
+        // new MobileMenu;
+        // Pace.on('done', this.#scrollInit.bind(this));
     }
 
     destroy() {
         this.#observers.forEach(so => so.destroy());
+        this.marquee.destroy();
     }
 
     #scrollInit() {
@@ -27,6 +31,7 @@ class Main {
             // new ScrollObserver('.vision__row', this.#visionAnimation , {rootMargin: "-20%", once: true}),
             new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
             new ScrollObserver('.main-title__line', this.#aboutLineAnimation),
+            new ScrollObserver('.marquee', this.#marqueeAnimation.bind(this), { once: false }),
         )
          this.#aboutLineAnimation();
 
@@ -86,7 +91,6 @@ class Main {
     
     #aboutLineAnimation(el,inview) {
         if(inview){
-            console.log('yobare');
             gsap.to(el, {
                 '--mask-position': '100%',
                 duration: .6,
@@ -110,5 +114,13 @@ class Main {
             this.fv.classList.add('triggered');
         }
     }
+
+    #marqueeAnimation(el, inview) {
+    if (inview) {
+        this.marquee.play();
+    } else {
+        this.marquee.pause();
+    }
+}
 }
 const main = new Main;

@@ -794,8 +794,8 @@
     font-size: 14px;
     line-height: 1.5;
     font-weight: 400;
-    
-    @include mq(lg){
+
+    @include mq(lg) {
       font-weight: 500;
 
     }
@@ -805,8 +805,8 @@
     font-size: 18px;
     margin-bottom: 44px;
     font-weight: 500;
-    
-    @include mq(lg){
+
+    @include mq(lg) {
       font-size: 24px;
       font-weight: 700;
     }
@@ -848,22 +848,23 @@
   &__info {
     max-width: 840px;
     margin: 0 auto;
-    
+
     @extend p;
-    
+
     &-wrap {
       padding-inline: 20px;
-      
+
     }
 
     &-item {
       margin-bottom: 16px;
 
-      @include mq(lg){
+      @include mq(lg) {
         display: flex;
       }
 
     }
+
     &-title {
       width: 116px;
     }
@@ -871,7 +872,7 @@
     &-data {
       margin-left: 10px;
 
-      @include mq(lg){
+      @include mq(lg) {
         margin-left: 0;
       }
     }
@@ -888,7 +889,7 @@
   position: relative;
   z-index: 10;
 
-  
+
 
   &__track {
     display: flex;
@@ -897,18 +898,76 @@
 
   &__group {
     display: flex;
+    align-items: center;
     flex-shrink: 0;
     gap: 20px;
     padding-right: 20px;
+    
+    @include mq(lg) {
+      gap: 30px;
+      padding-right: 30px;
+    }
+    
+    @include mq(xl) {
+      gap: 40px;
+      padding-right: 40px;
+    }
 
-    img {
-      display: block;
-      width: 300px;
-      height: 200px;
-      flex-shrink: 0;
-      object-fit: cover;
+  }
+
+  &__img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+    object-fit: cover;
+
+    &.vertical {
+      width: 144px;
+      height: 255px;
+
+      @include mq(lg) {
+        width: 192px;
+        height: 300px;
+      }
+
+      @include mq(xl) {
+        width: 224px;
+        height: 350px;
+      }
+    }
+
+    &.horizon {
+      width: 255px;
+      height: 144px;
+
+      @include mq(lg) {
+        width: 300px;
+        height: 192px;
+      }
+
+      @include mq(xl) {
+        width: 350px;
+        height: 224px;
+      }
+    }
+
+    &.square {
+      width: 180px;
+      height: 180px;
+
+      @include mq(lg) {
+        width: 240px;
+        height: 240px;
+      }
+
+      @include mq(xl) {
+        width: 280px;
+        height: 280px;
+      }
     }
   }
+
 }
 
 
