@@ -888,6 +888,14 @@
   background-color: #FBF7F0;
   position: relative;
   z-index: 10;
+  margin-bottom: 48px;
+
+  @include mq(lg){
+    margin-bottom: 80px;
+  }
+  @include mq(xl){
+    margin-bottom: 100px;
+  }
 
 
 

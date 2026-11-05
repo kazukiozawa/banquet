@@ -1207,6 +1207,17 @@ h5 {
   background-color: #FBF7F0;
   position: relative;
   z-index: 10;
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 960px) {
+  .marquee {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .marquee {
+    margin-bottom: 100px;
+  }
 }
 .marquee__track {
   display: flex;
