@@ -363,6 +363,12 @@ h5 {
   margin-top: 4px;
 }
 
+.reserve {
+  position: relative;
+  z-index: 10;
+  background-image: url("../images/reserveBg.png");
+}
+
 .appear.up .item {
   transform: translateY(6px);
 }
