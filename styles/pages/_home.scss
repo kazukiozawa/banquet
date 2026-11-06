@@ -15,6 +15,12 @@
   top: 0;
   width: 100%;
   height: 100vh;
+  // padding-top: 40px;
+  padding-top: calc($headerHeight + 40px);
+
+  @include mq(lg) {
+    padding-top: 0;
+  }
 
   &.triggered {
     .fv__logo {
@@ -35,13 +41,15 @@
     background-size: cover;
     background-position: center;
 
-    height: 89vh;
+    height: 81vh;
     // height: calc(100vh - $headerHeight - 80px);
-    margin-top: calc($headerHeight + 40px);
+    // margin-top: calc($headerHeight + 40px);
+    // margin-top: 40px;
 
     @include mq(lg) {
       margin-top: 0;
       margin-left: 188px;
+      height: 87vh;
     }
 
     @include mq(xl) {
@@ -53,7 +61,7 @@
     width: 138px;
     // display: none;
     position: absolute;
-    top: -118px;
+    top: 22px;
     left: 0;
     transition: filter 1s, opacity 1s;
     transition-delay: .5s;

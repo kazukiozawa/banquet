@@ -305,11 +305,11 @@ h5 {
 
 
 .main {
-  margin-top: $headerHeight;
+  // margin-top: $headerHeight;
 
-  @include mq(lg){
-    margin-top: 0;
-  }
+  // @include mq(lg){
+  //   margin-top: 0;
+  // }
 }
 
 .mobile-menu {

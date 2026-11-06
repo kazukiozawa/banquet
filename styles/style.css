@@ -339,15 +339,6 @@ h5 {
   }
 }
 
-.main {
-  margin-top: 88px;
-}
-@media screen and (min-width: 960px) {
-  .main {
-    margin-top: 0;
-  }
-}
-
 @media screen and (min-width: 960px) {
   .mobile-menu__btn {
     display: none;
@@ -438,6 +429,12 @@ h5 {
   top: 0;
   width: 100%;
   height: 100vh;
+  padding-top: 128px;
+}
+@media screen and (min-width: 960px) {
+  .fv {
+    padding-top: 0;
+  }
 }
 .fv.triggered .fv__logo {
   opacity: 0;
@@ -452,13 +449,13 @@ h5 {
   background-image: url("../images/fv.webp");
   background-size: cover;
   background-position: center;
-  height: 89vh;
-  margin-top: 128px;
+  height: 81vh;
 }
 @media screen and (min-width: 960px) {
   .fv__container {
     margin-top: 0;
     margin-left: 188px;
+    height: 87vh;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -469,7 +466,7 @@ h5 {
 .fv__logo {
   width: 138px;
   position: absolute;
-  top: -118px;
+  top: 22px;
   left: 0;
   transition: filter 1s, opacity 1s;
   transition-delay: 0.5s;
