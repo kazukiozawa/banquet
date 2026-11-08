@@ -6,6 +6,9 @@ class Main {
         this.header = document.querySelector('.header');
         this.sides = document.querySelectorAll('.side');
         this.fv = document.querySelector('.fv');
+        this.about = document.querySelector(".about");
+        this.menu = document.querySelector(".menu");
+        this.reserve = document.querySelector(".reserve");
         this.#init();
         this.marquee = new Marquee();
 
@@ -32,15 +35,17 @@ class Main {
             new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
             new ScrollObserver('.main-title__line', this.#aboutLineAnimation),
             new ScrollObserver('.marquee', this.#marqueeAnimation.bind(this), { once: false }),
+            new ScrollObserver('.menu', this.#reserveON.bind(this), { once: false }),
+            new ScrollObserver('.about', this.#reserveOff.bind(this), { once: false }),
         )
-         this.#aboutLineAnimation();
+        this.#aboutLineAnimation();
 
-        
+
     }
 
     #slowBackground(el, inview) {
-    
-        if(inview){
+
+        if (inview) {
             this.bs.addSlow();
         } else {
             this.bs.removeSlow();
@@ -48,54 +53,54 @@ class Main {
     }
 
     #toggleSlideAnimation(el, inview) {
-        if(inview) {
+        if (inview) {
             // this.hero.start();
         } else {
             // this.hero.stop();
         }
     }
 
-    
+
 
     #textAnimation(el, inview) {
-        if(inview) {
+        if (inview) {
             const ta = new TweenTextAnimation(el);
             ta.animate();
         }
     }
     #visionAnimation(el, inview) {
-        if(inview) {
-             const va = new TestTextAnimation(el);
+        if (inview) {
+            const va = new TestTextAnimation(el);
             // ta.typeAnimate();
             // ta.typeAnimate();
             va.animate();
         }
     }
 
-    
+
     #sideAnimation(el, inview) {
-        if(inview) {
+        if (inview) {
             this.sides.forEach(side => side.classList.add('inview'));
         } else {
             this.sides.forEach(side => side.classList.remove('inview'));
         }
     }
-    
+
     #inviewAnimation(el, inview) {
-        if(inview) {
+        if (inview) {
             el.classList.add('inview');
         } else {
             el.classList.remove('inview');
         }
     }
-    
-    #aboutLineAnimation(el,inview) {
-        if(inview){
+
+    #aboutLineAnimation(el, inview) {
+        if (inview) {
             gsap.to(el, {
                 '--mask-position': '100%',
                 duration: .6,
                 ease: 'power2.out',
-                
+
                 scrollTrigger: {
                     trigger: '.about',
                     start: 'top 20%',
@@ -106,7 +111,7 @@ class Main {
     }
 
     #navAnimation(el, inview) {
-        if(inview) {
+        if (inview) {
             this.header.classList.remove('triggered');
             this.fv.classList.remove('triggered');
         } else {
@@ -116,35 +121,23 @@ class Main {
     }
 
     #marqueeAnimation(el, inview) {
-    if (inview) {
-        this.marquee.play();
-    } else {
-        this.marquee.pause();
+        if (inview) {
+            this.marquee.play();
+        } else {
+            this.marquee.pause();
+        }
+    }
+
+    #reserveON(el, inview) {
+        if (inview) {
+            this.reserve.classList.add("inview"); 
+        }
+    }
+
+    #reserveOff(el, inview) {
+        if (inview) {
+            this.reserve.classList.remove("inview");
+        }
     }
 }
-}
-const main = new Main;
-
-const about = document.querySelector(".about");
-const menu = document.querySelector(".menu");
-const reserve = document.querySelector(".reserve");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.target === menu && entry.isIntersecting) {
-        reserve.classList.add("inview");
-      }
-
-      if (entry.target === about && entry.isIntersecting) {
-        reserve.classList.remove("inview");
-      }
-    });
-  },
-  {
-    threshold: 0,
-  }
-);
-
-observer.observe(about);
-observer.observe(menu);
+    const main = new Main;
