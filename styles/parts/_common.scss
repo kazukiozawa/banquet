@@ -10,7 +10,6 @@ body {
   letter-spacing: 0.05rem;
 }
 
-
 a {
   text-decoration: none;
   color: $cBlack;
@@ -22,11 +21,10 @@ p {
   //??
   letter-spacing: 0.05em;
 
-  @include mq (lg){
+  @include mq(lg) {
     font-size: 17px;
     line-height: 34px;
   }
-
 }
 
 h1,
@@ -128,7 +126,7 @@ h5 {
   display: inline-block;
   font-size: 40px;
   font-weight: 400;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   line-height: 1;
   letter-spacing: 0.03em;
@@ -148,17 +146,21 @@ h5 {
     margin-left: -10px;
     --mask-position: 0%;
 
-    mask-image: linear-gradient(to right,
-        #000 0%,
-        #000 var(--mask-position),
-        transparent var(--mask-position),
-        transparent 100%);
+    mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 var(--mask-position),
+      transparent var(--mask-position),
+      transparent 100%
+    );
 
-    -webkit-mask-image: linear-gradient(to right,
-        #000 0%,
-        #000 var(--mask-position),
-        transparent var(--mask-position),
-        transparent 100%);
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 var(--mask-position),
+      transparent var(--mask-position),
+      transparent 100%
+    );
   }
 
   // &__container {
@@ -166,7 +168,6 @@ h5 {
   //   flex-direction: column;
   //   justify-content: center;
   // }
-
 }
 
 .sub-title {
@@ -207,22 +208,18 @@ h5 {
   font-weight: 500;
   letter-spacing: 0.05em;
 
-  @include mq(lg){
+  @include mq(lg) {
     height: 100px;
   }
 
   &.triggered {
     .header__logo-main {
-      // display: block; 
+      // display: block;
       opacity: 1;
       transform: translate(0);
       transition-delay: 1.6s;
-
     }
-
-    
   }
-
 
   &__logo-main {
     // display: none;
@@ -232,7 +229,9 @@ h5 {
     // display: none;
     opacity: 0;
     transform: translateY(6%);
-    transition: transform 0.8s, opacity 0.8s;
+    transition:
+      transform 0.8s,
+      opacity 0.8s;
     transition-delay: 0.2s;
   }
 
@@ -245,11 +244,10 @@ h5 {
     margin-right: 20px;
     margin-left: 20px;
 
-    @include mq(xl){
+    @include mq(xl) {
       height: 100px;
       margin: 0 auto;
       padding-inline: clamp(20px, calc((100vw - 1200px) / 2), 196px);
-
     }
   }
 
@@ -258,12 +256,10 @@ h5 {
     display: flex;
     height: 100%;
     align-items: center;
-
   }
 
   &__btn-wrap {
     display: flex;
-
   }
 
   &__nav {
@@ -272,7 +268,6 @@ h5 {
     @include mq(lg) {
       display: block;
     }
-
   }
 
   &__ul {
@@ -297,12 +292,11 @@ h5 {
     color: $cWhite;
     margin-right: 8px;
 
-    @include mq(lg){
+    @include mq(lg) {
       margin-right: 0;
     }
   }
 }
-
 
 .main {
   // margin-top: $headerHeight;
@@ -325,20 +319,29 @@ h5 {
         width: 24px;
         background-color: $cMain;
 
-        &+span {
+        & + span {
           margin-top: 4px;
         }
-
       }
-
     }
-
-
   }
 }
 
 .reserve {
-  position: relative;
-  z-index: 10;
+  top: 0;
+  position: fixed;
+  opacity: 0;
+  z-index: 5;
   background-image: url("../images/reserveBg.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 100vh;
+  width: 100%;
+
+  &.inview {
+    opacity: 1;
+  }
+
+  
+
 }

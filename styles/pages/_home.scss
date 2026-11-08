@@ -1,10 +1,6 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-.footer {
-  width: 100vh;
-}
-
 .nav-trigger {
   position: absolute;
   top: 0;
@@ -26,7 +22,6 @@
     .fv__logo {
       opacity: 0;
       filter: grayscale(80%) blur(11px);
-
     }
 
     .fv__title {
@@ -63,8 +58,10 @@
     position: absolute;
     top: 22px;
     left: 0;
-    transition: filter 1s, opacity 1s;
-    transition-delay: .5s;
+    transition:
+      filter 1s,
+      opacity 1s;
+    transition-delay: 0.5s;
     opacity: 1;
 
     @include mq(lg) {
@@ -84,10 +81,11 @@
     padding-left: 20px;
     padding-top: 58vh;
     font-weight: 400;
-    transition: filter 1s, opacity 1s;
-    transition-delay: .5s;
+    transition:
+      filter 1s,
+      opacity 1s;
+    transition-delay: 0.5s;
     opacity: 1;
-
 
     @include mq(lg) {
       padding-left: 3vw;
@@ -490,8 +488,6 @@
       justify-content: center;
     }
 
-
-
     &-list {
       display: flex;
       flex-direction: column;
@@ -506,9 +502,7 @@
 
       @include mq(xxl) {
         padding-top: 78px;
-
       }
-
     }
 
     &-item {
@@ -516,7 +510,7 @@
       margin: 0 auto;
       flex-shrink: 0;
 
-      &+.menu__carte-list {
+      & + .menu__carte-list {
         margin-top: 68px;
 
         @include mq(lg) {
@@ -532,7 +526,7 @@
         margin-top: 0;
         max-width: none;
         width: min(32vw, 368px);
-        max-width: 368px
+        max-width: 368px;
       }
 
       @include mq(xl) {
@@ -582,7 +576,8 @@
       width: 100%;
       aspect-ratio: 1.3 / 1;
 
-      @include mq(md) {}
+      @include mq(md) {
+      }
 
       img {
         width: 100%;
@@ -629,7 +624,7 @@
   &__course {
     position: relative;
     margin: 0 20px;
-    // margin-bottom: 
+    // margin-bottom:
     @extend .pb-lg;
 
     @include mq(xl) {
@@ -649,7 +644,7 @@
         position: absolute;
         top: 6%;
         right: -5%;
-        width: 278px
+        width: 278px;
       }
     }
 
@@ -711,7 +706,8 @@
       }
     }
 
-    &-price {}
+    &-price {
+    }
 
     &-detail {
       padding-top: 24px;
@@ -731,7 +727,7 @@
 }
 
 .chef {
-  background-color: #FBF7F0;
+  background-color: #fbf7f0;
 
   position: relative;
   z-index: 10;
@@ -745,7 +741,6 @@
     text-align: center;
 
     padding-bottom: 72px;
-
   }
 
   &__inner {
@@ -770,7 +765,6 @@
     @include mq(xl) {
       max-width: 322px;
     }
-
   }
 
   &__name-wrap {
@@ -805,7 +799,6 @@
 
     @include mq(lg) {
       font-weight: 500;
-
     }
   }
 
@@ -823,28 +816,22 @@
   &__description {
     margin-bottom: 44px;
   }
-
-
-
 }
 
 .acc {
   @extend .pb-lg;
-  background-color: #FBF7F0;
+  background-color: #fbf7f0;
   position: relative;
   z-index: 10;
 
   @include mq(lg) {
     padding-top: 132px;
-
   }
 
   &__title-wrap {
-
     margin: 0 auto;
     text-align: center;
     padding-bottom: 72px;
-
   }
 
   & .map-embed {
@@ -861,7 +848,6 @@
 
     &-wrap {
       padding-inline: 20px;
-
     }
 
     &-item {
@@ -870,7 +856,6 @@
       @include mq(lg) {
         display: flex;
       }
-
     }
 
     &-title {
@@ -884,27 +869,23 @@
         margin-left: 0;
       }
     }
-
   }
-
 }
-
 
 .marquee {
   width: 100%;
   overflow: hidden;
-  background-color: #FBF7F0;
+  background-color: #fbf7f0;
   position: relative;
   z-index: 10;
-  margin-bottom: 48px; 
-  @include mq(lg){
-    margin-bottom: 80px;
+  padding-bottom: 48px;
+  margin-bottom: 100vh;
+  @include mq(lg) {
+    padding-bottom: 80px;
   }
-  @include mq(xl){
-    margin-bottom: 100px;
+  @include mq(xl) {
+    padding-bottom: 100px;
   }
-
-
 
   &__track {
     display: flex;
@@ -917,17 +898,16 @@
     flex-shrink: 0;
     gap: 20px;
     padding-right: 20px;
-    
+
     @include mq(lg) {
       gap: 30px;
       padding-right: 30px;
     }
-    
+
     @include mq(xl) {
       gap: 40px;
       padding-right: 40px;
     }
-
   }
 
   &__img {
@@ -982,13 +962,13 @@
       }
     }
   }
-
 }
-
 
 .footer {
   height: 200px;
   background-color: $cMain;
+  z-index: 10;
+  position: relative;
 }
 
 .mobile__menu-container {

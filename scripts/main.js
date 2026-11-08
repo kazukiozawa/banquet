@@ -124,3 +124,27 @@ class Main {
 }
 }
 const main = new Main;
+
+const about = document.querySelector(".about");
+const menu = document.querySelector(".menu");
+const reserve = document.querySelector(".reserve");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.target === menu && entry.isIntersecting) {
+        reserve.classList.add("inview");
+      }
+
+      if (entry.target === about && entry.isIntersecting) {
+        reserve.classList.remove("inview");
+      }
+    });
+  },
+  {
+    threshold: 0,
+  }
+);
+
+observer.observe(about);
+observer.observe(menu);
