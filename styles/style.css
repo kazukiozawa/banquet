@@ -375,6 +375,13 @@ h5 {
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
   max-width: 400px;
+  text-align: center;
+}
+.reserve__tel-btn img {
+  width: 20px;
+}
+.reserve__sns-btn img {
+  width: 20px;
 }
 
 .appear.up .item {
