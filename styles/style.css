@@ -364,9 +364,17 @@ h5 {
   background-size: cover;
   height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .reserve.inview {
   opacity: 1;
+}
+.reserve__inner {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  max-width: 400px;
 }
 
 .appear.up .item {
