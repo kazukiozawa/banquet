@@ -1,6 +1,14 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
+p {
+  font-size: 15px;
+
+  @include mq(lg) {
+    font-size: 17px;
+  }
+}
+
 .nav-trigger {
   position: absolute;
   top: 0;
@@ -962,15 +970,4 @@
       }
     }
   }
-}
-
-.footer {
-  height: 200px;
-  background-color: $cMain;
-  z-index: 10;
-  position: relative;
-}
-
-.mobile__menu-container {
-  display: none;
 }

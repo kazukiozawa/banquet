@@ -131,6 +131,7 @@ h5 {
   line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  mix-blend-mode: multiply;
 
   @include mq(lg) {
     font-size: 48px;
@@ -146,21 +147,17 @@ h5 {
     margin-left: -10px;
     --mask-position: 0%;
 
-    mask-image: linear-gradient(
-      to right,
-      #000 0%,
-      #000 var(--mask-position),
-      transparent var(--mask-position),
-      transparent 100%
-    );
+    mask-image: linear-gradient(to right,
+        #000 0%,
+        #000 var(--mask-position),
+        transparent var(--mask-position),
+        transparent 100%);
 
-    -webkit-mask-image: linear-gradient(
-      to right,
-      #000 0%,
-      #000 var(--mask-position),
-      transparent var(--mask-position),
-      transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to right,
+        #000 0%,
+        #000 var(--mask-position),
+        transparent var(--mask-position),
+        transparent 100%);
   }
 
   // &__container {
@@ -319,7 +316,7 @@ h5 {
         width: 24px;
         background-color: $cMain;
 
-        & + span {
+        &+span {
           margin-top: 4px;
         }
       }
@@ -340,31 +337,188 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 
   &.inview {
     opacity: 1;
   }
 
   &__inner {
-    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
     width: 100%;
     max-width: 400px;
     text-align: center;
+    padding: 40px 20px;
+    border-radius: 2px;
+    box-shadow: 2px 5px 5px rgba(12, 7, 0, .4);
 
+    
+    @include mq(md) {
+      max-width: 588px;
+    }
+    
+    @include mq(lg) {
+      max-width: 618px;
+    }
+    
     & .main-title {
+      margin-bottom: 52px;
+      
+      @include mq(lg) {
+        margin-bottom: 72px;
+      }
     }
   }
 
-  &__tel-btn {
-    & img {
-      width: 20px;
-    }
-    
+  &__papertest {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
-  &__sns-btn {
-    & img {
-      width: 20px;
-    }
-    
+  
+  &__discript {
+    margin-bottom: 12px;
   }
+
+  &__tel {
+    background-color: #EDE5DB;
+    mix-blend-mode: multiply;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 424px;
+
+    &-header {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-hours {
+      margin-bottom: 4px;
+
+    }
+
+    &-img {
+      width: 32px;
+      margin-right: 12px;
+      padding-top: 12px;
+      transform: rotate(14deg);
+      fill: $cMain;
+    }
+
+    &-num {
+      font-size: 32px;
+      color: $cMain;
+      line-height: 1;
+
+      @include mq(lg) {
+        font-size: 48px;
+      }
+    }
+
+    &-btn {
+      position: relative;
+      border: none;
+      transition: transform 0.3s ease;
+
+      margin: 0 auto;
+      width: 100%;
+      max-width: 248px;
+      height: 48px;
+      border-radius: 24px 24px;
+      margin: 0 auto;
+      background-color: $cMain;
+      color: $cWhite;
+      overflow: hidden;
+      isolation: isolate;
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+
+        width: 180%;
+        height: 220%;
+        left: -40%;
+        top: 110%;
+
+        filter: blur(2px);
+        background-color: #527B60;
+        border-radius: 43% 57% 52% 48% / 48% 44% 56% 52%;
+
+        transform: rotate(-12deg);
+
+        transition:
+          top 0.8s cubic-bezier(.22, 1, .36, 1),
+          border-radius 0.8s ease;
+      }
+
+      &:hover {
+
+        &::before {
+          top: -66%;
+          border-radius: 55% 45% 42% 58% / 55% 48% 52% 45%;
+        }
+      }
+
+      &-img {
+        width: 20px;
+        transform: rotate(14deg);
+        margin-right: 10px;
+      }
+
+    }
+
+
+  }
+
+  &__sns {
+    border: 1px solid $cBlack;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 424px;
+
+    &-btn {
+      width: 100%;
+      max-width: 248px;
+      height: 48px;
+      border-radius: 24px 24px;
+      margin: 0 auto;
+      color: $cMain;
+
+      & img {
+        width: 20px;
+        margin-right: 10px;
+      }
+
+    }
+
+    &-discript {
+      margin-bottom: 10px;
+    }
+
+
+
+  }
+
+
+}
+
+.footer {
+  height: 414px;
+  background-color: $cMain;
+  z-index: 10;
+  position: relative;
+}
+
+
+.mobile__menu-container {
+  display: none;
 }
