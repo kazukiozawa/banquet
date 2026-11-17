@@ -10,5 +10,3 @@ ScrollTrigger.create({
     reserve.classList.toggle("inview", self.scroll() >= self.start);
   },
 });
-
-console.log("reserve-Inview.js loaded");
