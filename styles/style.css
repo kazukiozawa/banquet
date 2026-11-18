@@ -448,7 +448,7 @@ h5 {
   margin-bottom: 12px;
 }
 .reserve__tel {
-  background-color: #EDE5DB;
+  background-color: #ede5db;
   mix-blend-mode: multiply;
   border-radius: 12px;
   padding: 20px;
@@ -532,10 +532,64 @@ h5 {
 }
 
 .footer {
-  height: 414px;
   background-color: #0C5C35;
   z-index: 10;
   position: relative;
+  padding-inline: 20px;
+  padding-top: 44px;
+  color: #ffffff;
+}
+.footer__inner {
+  max-width: 588px;
+  margin: 0px auto;
+}
+@media screen and (min-width: 960px) {
+  .footer__inner {
+    max-width: 840px;
+  }
+}
+.footer__top {
+  margin-bottom: 36px;
+}
+.footer__nav {
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.footer__nav a {
+  color: #ffffff;
+}
+.footer__logo {
+  width: 108px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+}
+@media screen and (min-width: 960px) {
+  .footer__logo {
+    width: 214px;
+  }
+}
+.footer__ul {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  row-gap: 22px;
+}
+@media screen and (min-width: 960px) {
+  .footer__ul {
+    gap: 38px;
+  }
+}
+.footer__bottom {
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+.footer__copy {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 12px;
 }
 
 .mobile__menu-container {
@@ -1365,8 +1419,13 @@ p, .acc__info {
   margin-bottom: 80px;
 }
 .acc__info {
-  max-width: 840px;
+  max-width: 588px;
   margin: 0 auto;
+}
+@media screen and (min-width: 960px) {
+  .acc__info {
+    max-width: 840px;
+  }
 }
 .acc__info-wrap {
   padding-inline: 20px;

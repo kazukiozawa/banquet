@@ -849,8 +849,12 @@ p {
   }
 
   &__info {
-    max-width: 840px;
+    max-width: 588px;
     margin: 0 auto;
+    
+    @include mq(lg) {
+      max-width: 840px;
+    }
 
     @extend p;
 
